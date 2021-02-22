@@ -1,0 +1,31 @@
+public abstract class Account{
+//(private) Account number, password, accountStaus, person associated with id, can they reset password?
+}
+
+public class Librarian extends Account{//
+    public boolean addBookItem(BookItem bookItem);
+  
+    public boolean blockMember(Member member);
+  
+    public boolean unBlockMember(Member member);
+}
+
+public class Member extends Account{//how many items they have, reserved books, due dates for each book, etc.
+public int getTotalBooksCheckedout();
+  
+    public boolean reserveBookItem(Item item);
+  
+    private void incrementTotalBooksCheckedout();
+  
+    public boolean checkoutBookItem(Item item) {}// error if there are two many items, 
+    //or item is already reserved, if not checkout
+    
+    private void checkForFine(String person) {//Does that person have any book over their due date?
+    }
+    public void returnBookItem(Item item) {//Is the item late? Was there a reservation it?
+    }
+    public bool renewBookItem(BookItem bookItem) {//Is the item late? Is there a reservation it?//Update due date
+    }
+    
+
+}
