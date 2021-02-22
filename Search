@@ -1,0 +1,39 @@
+public interface Search {///Should we be able to search by item?? Such as look for movies, or just books?
+    public List<Item> searchByTitle(String title);
+    public List<Item> searchByAuthor(String author);
+    public List<Item> searchBySubject(String subject);
+    public List<Item> searchByGenre(String object);
+    public List<Item> searchByPubDate(Date publishDate);
+  }
+  
+  public class Catalog implements Search {
+    private HashMap<String, List<Item>> itemTitles;
+    private HashMap<String, List<Item>> itemAuthors;
+    private HashMap<String, List<Item>> itemSubjects;
+    private HashMap<String, List<Item>> itemGenre;
+    private HashMap<String, List<Item>> itemPublicationDates;
+  
+    public List<Item> searchByTitle(String query) {
+      // return all books containing the string query in their title.
+      return itemTitles.get(query);
+    }
+  
+    public List<Item> searchByAuthor(String query) {
+      // return all books containing the string query in their author's name.
+      return itemAuthors.get(query);
+    }
+    public List<Item> searchByGenre(String query){
+    // return all books containing the string query in their genre.
+      return itemGenre.get(query);
+    }
+    
+    public List<Item> searchBySubject(String query){
+    // return all books containing the string query in their subjects.
+      return itemSubjects.get(query);
+    }
+    
+    pubilc List<Item> searchByPublication(String query){
+    // return all books containing the string query in their publication.
+      return itemPublicationDates.get(query);
+      }
+  }
