@@ -1,0 +1,33 @@
+public abstract class Book {//Title, author or suthors, genre, publisher, language, subject, etc.
+    
+  }
+  
+  public class BookItem extends Book {
+    private String barcode;
+    private boolean isReferenceOnly;
+    private Date borrowed;
+    private Date dueDate;
+    private double price;//This was include in our example but I am not sure it is necessary
+    private BookFormat format;
+    private BookStatus status;
+    private Date dateOfPurchase;//This was include in our example but I am not sure it is necessary
+    private Date publicationDate;
+    private Rack placedAt;
+  
+    public boolean checkout(String memberId) {
+      if(bookItem.getIsReferenceOnly()) {
+        ShowError("This book is Reference only and can't be issued");
+        return false;
+      }
+      if(!BookLending.lendBook(this.getBarCode(), memberId)){
+        return false;
+      }
+      this.updateBookItemStatus(BookStatus.LOANED);
+      return true;
+    }
+  }
+  
+  public class Rack {
+    private int number;
+    private String locationIdentifier;
+  }
