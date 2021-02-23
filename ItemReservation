@@ -1,3 +1,4 @@
+//I left this as our example is.
 public class BookReservation {
     private Date creationDate;
     private ReservationStatus status;
