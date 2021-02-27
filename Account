@@ -3,7 +3,7 @@ public abstract class Account{
 }
 
 public class Librarian extends Account{//
-    public boolean addBookItem(BookItem bookItem);
+    public boolean addEbookItem(eBookItem bookItem);
   
     public boolean blockMember(Member member);
   
@@ -20,8 +20,6 @@ public int getTotalBooksCheckedout();
     public boolean checkoutBookItem(Item item) {}// error if there are two many items, 
     //or item is already reserved, if not checkout
     
-    private void checkForFine(String person) {//Does that person have any book over their due date?
-    }
     public void returnBookItem(Item item) {//Is the item late? Was there a reservation it?
     }
     public bool renewBookItem(BookItem bookItem) {//Is the item late? Is there a reservation it?//Update due date
