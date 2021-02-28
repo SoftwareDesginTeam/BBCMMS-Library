@@ -1,0 +1,19 @@
+<!DOCTYPE htlm>
+<html>
+ <head> 
+    <title> BBCMMS Library</title>
+    <script async scr="./javascript/index.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+ </head>
+</htlm>
+<body>
+    <h1>BBCMMS Public Library Catalog</h1>
+    <button>Search</button>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+      </div>
+</body>
+</html>
