@@ -25,7 +25,7 @@ class Person{
     this.email = c;
     this.membershipID = d;
     this.password = e;
-    //<script>window.alert(Your Information has been update);</script> //To be added when consructed in HTML part
+    //<script>window.alert(Your Information has been updated);</script> //To be added when consructed in HTML part
   }
 }
   class Account{
