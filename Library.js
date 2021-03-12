@@ -37,3 +37,12 @@ class Person{
       this.deleted = deleted;
     }
   }
+
+class BookReservation {
+  constructor(creationDate,ReservationStatus, bookItemBarcode, memberId){
+    this.creationDate = creationDate;
+    this.ReservationStatus = ReseevationStatus;
+    this.bookItemBarcode = bookItemBarcode;
+    this.memberId = memberId;
+  }
+}
