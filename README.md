@@ -1,7 +1,7 @@
 # BBCMMS-Library
 A web-based Library Catalog
 
-Our Project is going to be a java written Library Catalog 
+Our Project is going to be a javascript-written Library Catalog 
 
 Team name	BBCMMS-Library
 Project title 	A web-based Library Catalog
