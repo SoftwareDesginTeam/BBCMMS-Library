@@ -91,10 +91,13 @@ body {
 
 .ebook {}
 
+
+/* 
 .ebook>img {
     width: 42px;
     height: 42px;
-}
+} 
+*/
 
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
