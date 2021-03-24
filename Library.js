@@ -19,13 +19,15 @@ class Person{
     this.membershipID = memebershipID;
     this.password = password;
   }
-  edit(a,b,c,d,e){
+  edit(a,b,c,d){
     this.firstName = a;
     this.lastName = b;
     this.email = c;
     this.membershipID = d;
-    this.password = e;
     //<script>window.alert(Your Information has been updated);</script> //To be added when consructed in HTML part
+  }
+  resetPassword(a){
+    this.password = a;
   }
 }
   class Account{
@@ -41,8 +43,16 @@ class Person{
 class BookReservation {
   constructor(creationDate,ReservationStatus, bookItemBarcode, memberId){
     this.creationDate = creationDate;
-    this.ReservationStatus = ReseevationStatus;
+    this.ReservationStatus = ReservationStatus;
     this.bookItemBarcode = bookItemBarcode;
     this.memberId = memberId;
+  }
+  removeReservation(b){
+    //This will be for both checkingout the book and simply removing the hold
+    //find book b
+    this.ReservationStatus = ReservationStatus;
+    this.bookItemBarcode = bookItemBarcode;
+    this.memberId = memberId;
+    //update member reservations and catalog hold list
   }
 }
