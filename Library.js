@@ -16,7 +16,7 @@ class Person{
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
-    this.membershipID = memebershipID;
+    this.membershipID = membershipID;
     this.password = password;
   }
   edit(a,b,c,d){
@@ -49,7 +49,7 @@ class BookReservation {
   }
   removeReservation(b){
     //This will be for both checkingout the book and simply removing the hold
-    //find book b
+    //find book and change status
     this.ReservationStatus = ReservationStatus;
     this.bookItemBarcode = bookItemBarcode;
     this.memberId = memberId;
