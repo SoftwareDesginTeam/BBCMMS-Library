@@ -17,12 +17,16 @@ class eBook {
 
 class Person {
     //Constructs Person
-    constructor(firstName, lastName, email, membershipID, password) {
+    constructor(firstName, lastName, email, membershipID, password, isLibrarian) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.membershipID = membershipID;
         this.password = password;
+
+        if (isLibrarian) {
+            Person.Librarians.add(this.membershipID)
+        }
     }
     edit(newFirstName, newLastName, newEmail, newMebershipID) {
         this.firstName = newFirstName;
