@@ -56,3 +56,6 @@ class BookReservation {
     //update member reservations and catalog hold list
   }
 }
+class Catalog(){
+hashmap
+}
