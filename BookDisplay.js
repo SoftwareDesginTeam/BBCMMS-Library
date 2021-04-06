@@ -62,10 +62,11 @@ async function getBook(title) {
     const bookData = await fetch(`https://openlibrary.org${bookKey}.json`).then(d => d.json())
 
     const authorData = await fetch(`https://openlibrary.org${bookData.authors[0].author.key}.json`).then(d => d.json())
+    console.log(bookData)
     const book = {
         title: bookData.title,
         author: authorData.name,
-        description: typeof bookData.description === 'string' || bookData.description instanceof String ? bookData.description : bookData.description.value,
+        description: bookData.description == undefined || (typeof bookData.description === 'string' || bookData.description instanceof String) ? bookData.description : bookData.description.value,
         imageURL: `http://covers.openlibrary.org/b/id/${bookData.covers[0]}-L.jpg`
     }
     return book
@@ -87,7 +88,14 @@ const HPSS = {
 const bookContainer = document.getElementById('books')
 bookContainer.appendChild(bookDisplay(TFIOS))
 bookContainer.appendChild(bookDisplay(HPSS))
-getBook("Harry Potter").then(book => bookContainer.appendChild(bookDisplay(book)))
-getBook("Percy Jackson").then(book => bookContainer.appendChild(bookDisplay(book)))
-getBook("The Hobbit").then(book => bookContainer.appendChild(bookDisplay(book)))
-    // getBook("Lord of the Rings").then(book => bookContainer.appendChild(bookDisplay(book)))
+
+async function addBooks() {
+    const harryPotter = await getBook("Harry Potter and the Deathly Hallows")
+    const percyJackson = await getBook("Percy Jackson and the Last Olympian")
+    const ROTK = await getBook("The Return of the King")
+
+    bookContainer.appendChild(bookDisplay(harryPotter))
+    bookContainer.appendChild(bookDisplay(percyJackson))
+    bookContainer.appendChild(bookDisplay(ROTK))
+}
+addBooks()
