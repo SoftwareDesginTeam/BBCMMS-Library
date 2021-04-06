@@ -45,6 +45,7 @@ function bookDescription(book) {
 
 // Gets an HTML element displaying the information for a book
 function bookDisplay(book) {
+    console.log(book)
     const bookClickable = getElement('div', { href: book.imageURL })
 
     bookClickable.appendChild(bookImage(book))
@@ -52,6 +53,21 @@ function bookDisplay(book) {
     bookClickable.append(bookAuthor(book))
     bookClickable.append(bookDescription(book))
     return bookClickable
+}
+
+async function getBook(title) {
+    const bookResponse = await fetch(`http://openlibrary.org/search.json?title=${title.split(' ').join('+')}`).then(d => d.json())
+    const bookKey = bookResponse.docs[0].key
+
+    const workURL = `https://openlibrary.org${bookKey}.json`
+    const bookData = await fetch(workURL).then(d => d.json())
+    const book = {
+        title: bookData.title,
+        author: bookData.author,
+        description: typeof bookData.description === 'string' || bookData.description instanceof String ? bookData.description : bookData.description.value,
+        imageURL: `http://covers.openlibrary.org/b/id/${bookData.covers[0]}-L.jpg`
+    }
+    return book
 }
 
 const TFIOS = {
@@ -70,3 +86,5 @@ const HPSS = {
 const bookContainer = document.getElementById('books')
 bookContainer.appendChild(bookDisplay(TFIOS))
 bookContainer.appendChild(bookDisplay(HPSS))
+getBook("Harry Potter").then(book => bookContainer.appendChild(bookDisplay(book)))
+getBook("Percy Jackson").then(book => bookContainer.appendChild(bookDisplay(book)))
