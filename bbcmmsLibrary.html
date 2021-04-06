@@ -5,7 +5,8 @@
 <head>
     <title> BBCMMS Library</title>
     <script src="API.js"></script>
-    <script scr="Library.js"></script>
+    <script src="BookDisplay.js" defer></script>
+    <script src="Library.js"></script>
     <link rel="stylesheet" href="Style.css" />
     <link rel="icon" type="image/png" href="/images/Book.ico" sizes="32x32">
 </head>
@@ -18,7 +19,7 @@
         <div class="search-container">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit"><i class="fa fa-search">Go!</i></button>
             </form>
         </div>
     </div>
@@ -29,9 +30,9 @@
         <p>And Nothing Else.</p>
     </div>
 
-    <a href="default.asp" class="ebook">
-        <img src="images/ExampleBook.png" alt="Ebook Cover" />
-    </a>
+    <div id="books">
+
+    </div>
 
     <!-- https://libguides.utoledo.edu/facultytech/catalogwidgets (A URL link to example options for search formating --->
 </body>
