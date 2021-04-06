@@ -46,7 +46,7 @@ function bookDescription(book) {
 function bookDisplay(book) {
     const bookElement = getElement('div', { href: book.imageURL })
 
-    bookElement.className = "book"
+    bookElement.className = "book card"
 
     bookElement.appendChild(bookImage(book))
     bookElement.append(bookTitle(book))
