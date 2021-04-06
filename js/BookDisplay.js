@@ -23,35 +23,37 @@ function getElement(tagName, properties) {
 
 // Gets the HTML to display the image of a book
 function bookImage(book) {
-    const image = getElement('img', { src: book.imageURL, alt: book.title })
+    const image = getElement('img', { className: "image", src: book.imageURL, alt: book.title })
     image.width = window.innerWidth / 20
     return image
 }
 
 // Gets the HTML to display the title of a book
 function bookTitle(book) {
-    return getElement('h3', { textContent: book.title })
+    return getElement('h3', { className: "title", textContent: book.title })
 }
 
 // Gets the HTML to display the author of a book
 function bookAuthor(book) {
-    return getElement('h4', { textContent: book.author })
+    return getElement('h4', { className: "author", textContent: book.author })
 }
 
 // Gets the HTML to display the description of a book
 function bookDescription(book) {
-    return getElement('p', { textContent: book.description })
+    return getElement('p', { className: "description", textContent: book.description })
 }
 
 // Gets an HTML element displaying the information for a book
 function bookDisplay(book) {
-    const bookClickable = getElement('div', { href: book.imageURL })
+    const bookElement = getElement('div', { href: book.imageURL })
 
-    bookClickable.appendChild(bookImage(book))
-    bookClickable.append(bookTitle(book))
-    bookClickable.append(bookAuthor(book))
-    bookClickable.append(bookDescription(book))
-    return bookClickable
+    bookElement.className = "book"
+
+    bookElement.appendChild(bookImage(book))
+    bookElement.append(bookTitle(book))
+    bookElement.append(bookAuthor(book))
+    bookElement.append(bookDescription(book))
+    return bookElement
 }
 
 // Get any and all book info
@@ -85,7 +87,7 @@ const HPSS = {
     description: "A book about geology, I'm sure"
 }
 
-const bookContainer = document.getElementById('books')
+const bookContainer = document.getElementById('catalog')
 bookContainer.appendChild(bookDisplay(TFIOS))
 bookContainer.appendChild(bookDisplay(HPSS))
 
