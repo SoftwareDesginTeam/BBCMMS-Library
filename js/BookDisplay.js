@@ -75,7 +75,7 @@ async function getBook(title) {
 const TFIOS = {
     title: "The Fault in Our Stars",
     author: "John Green",
-    imageURL: "img/ExampleBook.png",
+    imageURL: "../img/ExampleBook.png",
     description: "A book about astronomy, I'm sure"
 }
 const HPSS = {
