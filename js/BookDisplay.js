@@ -24,7 +24,6 @@ function getElement(tagName, properties) {
 // Gets the HTML to display the image of a book
 function bookImage(book) {
     const image = getElement('img', { className: "image", src: book.imageURL, alt: book.title })
-    image.width = window.innerWidth / 20
     return image
 }
 
