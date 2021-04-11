@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class=button-box>
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div>
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Email or Username" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember credentials?</span>
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+                <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Enter your Username" required>
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and services.</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var loginButt = document.getElementById("login");
+        var registerButt = document.getElementById("register");
+        var button = document.getElementById("btn");
+
+        function register() {
+            loginButt.style.left = "-400px";
+            registerButt.style.left = "50px";
+            button.style.left = "110px";
+        }
+
+        function login() {
+            loginButt.style.left = "50px";
+            registerButt.style.left = "450px";
+            button.style.left = "0px";
+        }
+
+
+    </script>
+
+</body> 
+</html>
