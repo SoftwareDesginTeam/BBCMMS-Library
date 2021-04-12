@@ -56,17 +56,6 @@ class Account {
     }
 }
 
-function validate(){
-    var username = document.getElementById("email").value;
-    var password = document.getElementById("psw").value;
-    if(username == Person.email && password == Person.password){
-        alert("Login Succesful");
-        return false;
-    }else{
-        alert("Login Failed")
-    }
-}
-
 class BookReservation {
     constructor(creationDate, ReservationStatus, bookItemBarcode, memberId) {
         this.creationDate = creationDate;
