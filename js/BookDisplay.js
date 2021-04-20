@@ -99,3 +99,14 @@ async function addBooks() {
     bookContainer.appendChild(bookDisplay(ROTK))
 }
 addBooks()
+
+/**
+ * User
+ * ID | EMAIL | PASSWORD
+ * 
+ * Book [Through API]
+ * ISBN | Title | Author
+ * 
+ * BooksLent
+ * UserID [User] | ISBN
+ */
