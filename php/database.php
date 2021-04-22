@@ -17,7 +17,6 @@
 
     if(mysql_connect_errno()){
         echo "Failed to Connect!";
-        exit()
-    }
+        exit() }
     echo "Connection Success!";
 ?>
