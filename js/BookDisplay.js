@@ -75,7 +75,7 @@ async function getBook(title) {
 const TFIOS = {
     title: "The Fault in Our Stars",
     author: "John Green",
-    imageURL: "img/ExampleBook.png",
+    imageURL: "../img/ExampleBook.png",
     description: "A book about astronomy, I'm sure"
 }
 const HPSS = {
@@ -99,3 +99,14 @@ async function addBooks() {
     bookContainer.appendChild(bookDisplay(ROTK))
 }
 addBooks()
+
+/**
+ * User
+ * ID | EMAIL | PASSWORD
+ * 
+ * Book [Through API]
+ * ISBN | Title | Author
+ * 
+ * BooksLent
+ * UserID [User] | ISBN
+ */
