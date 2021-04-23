@@ -32,7 +32,7 @@
                 $stmt = $conn->prepare($INSERT);
                 $stmt->bind_param("ssssii", $name, $email, $password);
                 $stmt->execute();
-                echo "New record instered successfully";
+                echo "New record inserted successfully";
             }else{
                 echo "Someone already registered using this email";
             }
