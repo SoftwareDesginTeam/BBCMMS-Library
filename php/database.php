@@ -9,7 +9,7 @@
         $serverName = "localhost";
         $userName = "root";
         $psswrd = "";
-        $dbName = "SQLdata_base";
+        $dbName = "ProjectReal";
         $con = mysql_connect($serverName, $userName, $psswrd, $dbName);
 
         if(mysqli_connect_error()){
