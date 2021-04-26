@@ -6,10 +6,10 @@
     if (!empty($name) ||!empty($email) || !empty($password)){
          //create database connection
          //Data base values
-        $serverName = "localhost";
+        $serverName = "lRealocalhost";
         $userName = "root";
         $psswrd = "";
-        $dbName = "ProjectReal";
+        $dbName = "Project";
         $con = mysql_connect($serverName, $userName, $psswrd, $dbName);
 
         if(mysqli_connect_error()){

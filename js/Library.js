@@ -43,8 +43,6 @@ class Person {
 // Set of the people who have librarian permissions
 Person.Librarians = new Set()
 
-
-
 class Account {
     //Constructs Account
     constructor(memberID, checkedOutEbooks, reservations, active, deleted) {
