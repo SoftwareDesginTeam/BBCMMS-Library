@@ -9,26 +9,22 @@
     
 </head>
 <style>
-  img{
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 5px;
-      width: 150px;
-      }
+  button{
+    border-color: lightpink;
+    margin: 0;
+    color:white;
+    font-family: courier;
+    text-align: center;
+    margin-left: 600px;
+    /* background-color: lightskyblue; */
+    background-color:lightpink;
+  }
+  
 </style>
 <body style="background-color:lightblue;color:white;padding:20px;"">
    <h1>BBCMMS Library User Account</h1>
    <div id="record_basket">
-    <div id="record_basket_icon">
-       <a href="/eg/opac/mylist" class="no-dec" rel="nofollow" vocab="">
-         <img src="/img/Basket_image.png" alt="Basket">
-       </a>
-       <br>
-       <a href="/eg/opac/mylist" class="no-dec" rel="nofollow" vocab="">
-        <span id="record_basket_count">0</span>
-        <span class="sr-only">Books in basket</span>
-      </a>
-    </div>
+      <button type="button" onclick="checkout()">Checkout Books</button>
   </div>
   <div>
     <fieldset style ="background-color:lightpink">
@@ -37,19 +33,15 @@
     </fieldset>
     <fieldset style ="background-color:lightpink" >
       <legend>Your eBooks:</legend>
-      
-    </fieldset>
-    <fieldset style ="background-color:lightpink">
-      <legend>Your eBooks on Hold:</legend>
-      
-    </fieldset>
+    
+   </div>
+   <div>
     <p>
       <a href="bbcmmsLibrary.html" class="btn btn-info btn-lg">
         <span class="glyphicon glyphicon-log-out"></span> Log out
       </a>
     </p> 
    </div>
-   
 </body>
 
 </html>
