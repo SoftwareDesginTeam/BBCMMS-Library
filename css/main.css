@@ -54,8 +54,8 @@ body {
 
 .topnav .search-container {
     float: right;
+    border-radius: 1px;
 }
-
 
 /* Style the search box inside the navigation bar */
 
@@ -72,34 +72,22 @@ body {
 /* Syle the search button in the navigation bar */
 
 .topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
+    background-color: darkturquoise; 
+    font-family:  courier;
     border: none;
-    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
 }
 
 .topnav .search-container button:hover {
     background: #ccc;
 }
-
-
-/* Styles the representation of an Ebook */
-
-
-/* .ebook {} */
-
-
-/* 
-.ebook>img {
-    width: 42px;
-    height: 42px;
-} 
-*/
-
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 
@@ -110,7 +98,7 @@ body {
     .topnav a,
     .topnav input[type=text],
     .topnav .search-container button {
-        float: none;
+        float:none;
         display: block;
         text-align: left;
         width: 100%;

@@ -54,6 +54,7 @@ function bookDisplay(book) {
     return bookClickable
 }
 
+
 // Get any and all book info
 async function getBook(title) {
     const bookResponse = await fetch(`http://openlibrary.org/search.json?title=${title.split(' ').join('+')}`).then(d => d.json())
@@ -110,3 +111,9 @@ addBooks()
  * BooksLent
  * UserID [User] | ISBN
  */
+
+///Search Bar Function Call for Catalog 
+function SearchFunction(){
+     var bookSearch = document.getElementById("search").value;
+     getBook(bookSearch);
+ }  
