@@ -1,0 +1,43 @@
+main {
+  background-color: var(--light);
+/*   color: var(--darkAccent); */
+  padding: 20px;
+}
+
+.buttonBank{
+  margin-top: 15px;
+}
+
+/* .buttonBank > button {
+  border-color: var(--accent);
+  margin: 0;
+  color: var(--light);
+  font-family: courier;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  margin-left: 600px; 
+   background-color: lightskyblue; 
+  background-color: var(--accent);
+} */
+
+
+fieldset{
+  border:none;
+  margin-top:10px;
+  border: 1px solid black;
+}
+
+button{
+    background-color: #3F88C5; 
+    font-family:  courier;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}

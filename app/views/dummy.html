@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <script src="/js/Common.js"></script>
+    <script src="/js/login.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/38bea932-76f8-44d0-a6c7-d9d3da9169b9%2FBook.ico?v=1619724258003"
+      sizes="32x32"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div>
+          <form id="login" class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >Remember credentials?</span
+            >
+            <button type="submit" class="submit-btn">Log in</button>
+          </form>
+          <form id="register" class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              name="name"
+              placeholder="Enter your Name"
+              required
+            />
+            <input
+              type="email"
+              class="input-field"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var loginButton = document.getElementById("login");
+      var registerButton = document.getElementById("register");
+      var button = document.getElementById("btn");
+
+      function register() {
+        loginButton.style.left = "-400px";
+        registerButton.style.left = "50px";
+        button.style.left = "110px";
+      }
+
+      function login() {
+        loginButton.style.left = "50px";
+        registerButton.style.left = "450px";
+        button.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>

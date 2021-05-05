@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>BBCMMS Library</title>
+    <script src="../js/Common.js"></script>
+    <script src="../js/BookDisplay.js" defer></script>
+    <script src="../js/catalog.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/38bea932-76f8-44d0-a6c7-d9d3da9169b9%2FBook.ico?v=1619724258003" sizes="32x32" />
+</head>
+<body>
+    <div class="topnav">
+      <a class="active" href="#home">BBCMMS Library</a>
+        <a href="./catalog.html">Catalog</a>
+        <a href="./account.html">Account</a>
+        <a onclick="logout()">Logout</a>
+        <div class="search-container">
+            <form type="GET" action="./search.html">
+                <input type="text" placeholder="Search.." name="search" />
+                <button type="submit"><i class="fa fa-search">Go!</i></button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <div>
+            <h2>BBCMMS Library Catalog</h2>
+            <p>eBooks.</p>
+            <p>And Nothing Else.</p>
+          
+            <p>Books From Our Catalog:</p>
+        </div>
+
+        <div id="books"></div>
+    </main>
+    <!-- https://libguides.utoledo.edu/facultytech/catalogwidgets (A URL link to example options for search formating --->
+</body>
+
+</html>
