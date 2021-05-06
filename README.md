@@ -1,6 +1,7 @@
 # BBCMMS-Library
 ## Summary
-A web-based Library Catalog written in JavaScript
+A web-based Library Catalog written in JavaScript.
+
 URL link for live site: https://bbcmms-library.glitch.me
 
 URL link for code:https://glitch.com/edit/#!/bbcmms-library
